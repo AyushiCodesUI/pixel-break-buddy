@@ -1,7 +1,9 @@
 # Portfolio media and project documentation
 
-No screenshots or recordings have been added yet. Capture the actual app, preserving
-its existing design; do not present generated mockups as working product evidence.
+A cropped GIF and the original MP4 recording are available in demo/ and linked from
+the project README. Separate screenshots have not been added. See demo/README.md
+for specifications, editing notes, and the full recording’s privacy-review items.
+Capture the actual app; do not present generated mockups as working product evidence.
 
 Suggested media:
 

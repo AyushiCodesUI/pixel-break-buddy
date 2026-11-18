@@ -1,11 +1,13 @@
 # Publish candidate manifest
 
-Reviewed local Git candidates after cleanup. No files were staged or committed.
+Reviewed local Git candidates after cleanup, updated to include the two recorded demo assets (67 files). The unchanged full MP4 contains account/sidebar and project information: review it before public upload. No files were staged or committed.
 Regenerate the live list using `git ls-files --cached --others --exclude-standard`
 before publishing; new files can change this snapshot. This list is not a command
 to upload the entire working folder.
 
 ```text
+docs/demo/pixel-break-buddy-demo.mp4
+docs/demo/pixel-break-buddy-preview.gif
 .gitignore
 ASSET-LICENSE.md
 LICENSE
@@ -79,10 +81,12 @@ exclusion does not delete them. Only sanitized release-audit Markdown is a candi
 
 Required source inputs retained: package-lock.json, all runtime JS/HTML/CSS, tests,
 the seven assets PNGs, build/icon.icns, and preparation/verification scripts.
+The additional GIF and original MP4 are explicitly included as demo media.
 
 ## Recorded checks
 
 - No personal home-folder or temporary test paths found in publishable text.
+- The text scan does not cover visible desktop information or audio in recordings.
 - No provider-token, credential-assignment, or private-key patterns found in the
   scanned candidate text. Pattern scans cannot guarantee absence of all secrets.
 - Runtime source, PNGs, icon, package.json, and package-lock.json hashes unchanged.

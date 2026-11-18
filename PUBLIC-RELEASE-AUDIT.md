@@ -73,7 +73,7 @@ release-audit/package-verification.txt
 
 Keep package-lock.json, build/icon.icns, scripts, and tests. Do not blanket-ignore build/ because its icon is an input. Excluding files does not remove already committed history; there are currently no commits here.
 
-**Safe publication candidates after review:** root runtime JS/HTML/CSS, test files, scripts, package.json/package-lock.json, improved .gitignore, sanitized documentation/audit summaries, and rights-cleared runtime images/icon. README.md, LICENSE (MIT source), LICENSE-SCOPE.md, ASSET-LICENSE.md, and THIRD-PARTY-NOTICES.md are now present. Separate visuals are excluded from MIT. Media folders contain guidance, not fabricated screenshots.
+**Safe publication candidates after review:** root runtime JS/HTML/CSS, test files, scripts, package.json/package-lock.json, improved .gitignore, sanitized documentation/audit summaries, and rights-cleared runtime images/icon. README.md, LICENSE (MIT source), LICENSE-SCOPE.md, ASSET-LICENSE.md, and THIRD-PARTY-NOTICES.md are now present. Separate visuals are excluded from MIT. Media now includes a GIF derived from the working-app recording and its unchanged original MP4; no screenshots were fabricated. The original full desktop recording needs privacy review before public upload.
 
 ## 3. Asset rights inventory
 
@@ -94,7 +94,7 @@ No embedded PNG text/EXIF metadata was detected in the seven runtime PNGs. That 
 
 ## 4. Readiness and approval boundary
 
-**Public GitHub: ready for the owner’s final content/license review, not yet published.** Approved cleanup is complete: portable documentation, improved exclusions, README, MIT source scope, separate visual asset notice, third-party notice guidance, and screenshot/demo folders. Confirm that the asset permission's project-specific scope reflects the intended reuse policy. Actual media and original generation records are not supplied here. Review the Git candidate manifest and licenses before the first commit.
+**Public GitHub: ready for the owner’s final content/license review, not yet published.** Approved cleanup is complete: portable documentation, improved exclusions, README, MIT source scope, separate visual asset notice, third-party notice guidance, and screenshot/demo folders. Confirm that the asset permission's project-specific scope reflects the intended reuse policy. A real recording and GIF have since been supplied; review the full recording’s visible account/sidebar and project information before uploading it. Original artwork generation records are not included. Review the Git candidate manifest and licenses before the first commit.
 
 **Limited unnotarized beta: technically tested; ready for owner review before sharing.** The creator reports all seven post-upgrade acceptance tests passed. Preserve the complete app and upstream notices, and include the newly prepared source/asset notice documents alongside it. No rebuild was done for documentation changes. Confirm a feedback route and test a downloaded/quarantined copy on another Mac before sending it more widely; local success does not prove Gatekeeper acceptance or another Mac's login registration.
 

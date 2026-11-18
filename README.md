@@ -6,6 +6,14 @@ Pixel Break Buddy explores how a small character, motion, and personality can ma
 a routine reminder feel more approachable. It is a UI/UX and AI-assisted development
 portfolio project built with Electron, HTML, CSS, and JavaScript.
 
+![Pixel Break Buddy desktop mascot progressing from Happy to Annoyed to Angry, with readable break reminder controls](docs/demo/pixel-break-buddy-preview.gif)
+
+[Watch the full desktop demo — original MP4, 27 seconds](docs/demo/pixel-break-buddy-demo.mp4)
+
+Real screen recording of the working macOS application. The silent GIF uses cropped
+excerpts and briefly holds the Angry state for readability; the full video preserves
+the original recording and audio track.
+
 **Status:** tested local beta candidate · Apple Silicon · macOS 13+ · not notarized.
 No public download or GitHub release has been published yet.
 
@@ -49,8 +57,9 @@ apply to future timer phases instead of unexpectedly restarting an active countd
 
 ## Preview and case study media
 
-Screenshot and demo folders are ready, but captures have not been added or fabricated.
-See [docs/README.md](docs/README.md) for the capture plan and privacy checklist.
+The recorded GIF and full desktop video are linked above. Separate screenshots have
+not been added. See [docs/README.md](docs/README.md) for media details and the capture
+plan. All demo visuals come from the running application.
 
 ## AI-assisted development
 
