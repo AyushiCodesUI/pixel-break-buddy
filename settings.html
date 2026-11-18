@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'">
+  <title>Customize Mascot</title>
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+  <header><span class="eyebrow">PIXEL BREAK BUDDY</span><h1>Make your buddy yours.</h1><p>A little personality for your next break.</p></header>
+  <main>
+    <section class="preview-panel" aria-label="Live mascot preview">
+      <div class="preview-stage"><div id="preview" aria-label="Mascot preview" role="img"><img id="preview-image" src="assets/mascot/state-happy.png" alt="" draggable="false"></div></div>
+      <span class="eyebrow">LIVE PREVIEW</span>
+      <label for="preview-mood">Try an expression</label>
+      <select id="preview-mood"><option value="happy">Happy</option><option value="annoyed">Annoyed</option><option value="angry">Angry</option></select>
+      <p id="personality-description"></p>
+    </section>
+    <form id="customization">
+      <p id="artwork-note">Your uploaded artwork is used as supplied. Size and personality are adjustable.</p>
+      <fieldset id="controls" disabled>
+        <label for="design">Character</label>
+        <select id="design" disabled aria-describedby="artwork-note"><option>Uploaded mascot</option></select>
+        <label for="color">Color</label>
+        <select id="color" disabled aria-describedby="artwork-note"><option>Original artwork colors</option></select>
+        <label for="size">Size <output id="size-value" for="size">100%</output></label>
+        <input id="size" type="range" min="70" max="140" step="1" value="100">
+        <div class="range-labels"><span>70%</span><span>140%</span></div>
+        <label for="accessory">Accessory</label>
+        <select id="accessory" disabled aria-describedby="artwork-note"><option>Included in artwork</option></select>
+        <label for="personality">Personality</label>
+        <select id="personality"><option value="friendly">Friendly</option><option value="playful">Playful</option><option value="sassy">Sassy</option></select>
+      </fieldset>
+    </form>
+  </main>
+  <footer><p id="status" role="status">Loading your preferences…</p><button id="retry" type="button" hidden>Retry saving</button></footer>
+  <script src="mascot-art.js"></script><script src="mascot-images.js"></script><script src="settings.js"></script>
+</body>
+</html>

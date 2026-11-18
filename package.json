@@ -1,0 +1,54 @@
+{
+  "name": "pixel-break-buddy",
+  "version": "1.0.0",
+  "description": "A small always-on-top pixel mascot for macOS.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test-mode": "electron . --test-mode",
+    "test": "node --test *.test.js",
+    "build:icon": "python3 scripts/create-icon.py",
+    "build:mac": "electron-builder --mac --arm64 --dir"
+  },
+  "devDependencies": {
+    "electron": "45.3.4",
+    "electron-builder": "^26.18.0"
+  },
+  "private": true,
+  "productName": "Pixel Break Buddy",
+  "build": {
+    "appId": "com.pixelbreakbuddy.app",
+    "productName": "Pixel Break Buddy",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "asar": true,
+    "files": [
+      "*.js",
+      "*.html",
+      "*.css",
+      "assets/mascot/**/*.png",
+      "assets/tray/*.png",
+      "!*.test.js"
+    ],
+    "mac": {
+      "target": [
+        {
+          "target": "dir",
+          "arch": [
+            "arm64"
+          ]
+        }
+      ],
+      "category": "public.app-category.healthcare-fitness",
+      "icon": "build/icon.icns",
+      "identity": "-",
+      "hardenedRuntime": false,
+      "gatekeeperAssess": false,
+      "notarize": false,
+      "minimumSystemVersion": "13.0.0"
+    },
+    "publish": null
+  }
+}

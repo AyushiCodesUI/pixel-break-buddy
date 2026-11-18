@@ -1,0 +1,42 @@
+# Dependencies and generated applications
+node_modules/
+dist/
+*.app/
+*.dmg
+*.pkg
+
+# Local backups, duplicate source artwork, and tool caches
+backups/
+assets:mascot/
+.DS_Store
+._*
+__pycache__/
+*.py[cod]
+coverage/
+.nyc_output/
+*.log
+npm-debug.log*
+
+# Local environment, credentials, and signing material
+.env
+.env.*
+!.env.example
+.npmrc
+.netrc
+*.p12
+*.pfx
+*.pem
+*.key
+*.mobileprovision
+*.provisionprofile
+
+# User-specific application data
+application-preferences.json
+mascot-preferences.json
+*.json.tmp
+
+# Machine-specific verification output; sanitized markdown reports stay public
+release-audit/*
+!release-audit/*.md
+
+# Preserve build/icon.icns: it is a required input, not a generated app.

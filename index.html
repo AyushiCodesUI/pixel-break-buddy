@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self'; script-src 'self'"
+    />
+    <title>Pixel Break Buddy</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Warm the mood-image cache during the hidden work session. -->
+    <div hidden aria-hidden="true">
+      <img src="assets/mascot/state-annoyed.png" alt="" />
+      <img src="assets/mascot/state-angry.png" alt="" />
+      <img src="assets/mascot/walking-aligned.png" alt="" />
+    </div>
+    <main id="buddy" hidden>
+      <section id="bubble" class="bubble" aria-label="Break reminder" hidden>
+        <span id="mode" hidden>TEST MODE</span>
+        <h1 id="message"></h1>
+        <p id="detail"></p>
+        <p id="countdown" role="timer" hidden></p>
+        <div id="actions">
+          <button id="take-break" type="button">Take a Break</button>
+          <button id="snooze" type="button">Remind Me Later</button>
+        </div>
+      </section>
+    <div id="walker"><div
+      id="mascot"
+      class="mascot"
+      role="button"
+      tabindex="0"
+      aria-controls="bubble"
+      aria-expanded="false"
+      aria-label="Happy pixel art buddy"
+    ><img id="mascot-image" src="assets/mascot/state-happy.png" alt="" draggable="false" decoding="sync" /><span id="walking-sprite" aria-hidden="true" hidden></span></div></div>
+    </main>
+    <script src="mascot-art.js"></script>
+    <script src="mascot-images.js"></script>
+    <script src="entrance.js"></script>
+    <script src="emotions.js"></script>
+    <script src="emotion-audio.js"></script>
+    <script src="renderer.js"></script>
+  </body>
+</html>

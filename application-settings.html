@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'">
+  <title>Settings — Pixel Break Buddy</title>
+  <link rel="stylesheet" href="application-settings.css">
+</head>
+<body>
+  <header><span class="eyebrow">PIXEL BREAK BUDDY</span><h1>Your break rhythm.</h1><p>A little room to focus. A little time to recharge.</p></header>
+  <section class="current" aria-label="Current timer configuration">
+    <span id="mode" class="eyebrow">CURRENT TIMER</span>
+    <p id="active-timer" role="timer">Loading…</p>
+    <p id="effective-config"></p>
+    <p id="saved-config"></p>
+  </section>
+  <form id="settings-form">
+    <fieldset id="controls" disabled>
+      <legend>Durations</legend>
+      <div class="durations">
+        <label for="workMinutes">Work<select id="workMinutes"><option value="30">30 min</option><option value="45">45 min</option><option value="60">60 min</option></select></label>
+        <label for="breakMinutes">Break<select id="breakMinutes"><option value="5">5 min</option><option value="10">10 min</option><option value="15">15 min</option></select></label>
+        <label for="snoozeMinutes">Snooze<select id="snoozeMinutes"><option value="5">5 min</option><option value="10">10 min</option><option value="15">15 min</option></select></label>
+      </div>
+      <p class="hint">Saved durations apply when the next work session, break, or snooze starts. Your current countdown stays unchanged.</p>
+      <label class="toggle" for="sounds"><span>Reminder sounds<small>A unique retro sound for each settled emotion.</small></span><input id="sounds" type="checkbox" role="switch"></label>
+      <section class="sound-preview" aria-labelledby="sound-preview-title">
+        <h2 id="sound-preview-title">Sound Preview</h2>
+        <label for="soundVolume">Volume <output id="volume-value" for="soundVolume">25%</output></label>
+        <input id="soundVolume" type="range" min="0" max="100" step="1" value="25">
+        <div class="preview-buttons">
+          <button id="preview-happy" type="button">Preview Happy Sound</button>
+          <button id="preview-annoyed" type="button">Preview Annoyed Sound</button>
+          <button id="preview-angry" type="button">Preview Angry Sound</button>
+        </div>
+        <p id="preview-note" class="hint">Enable Reminder Sounds and save to preview. Previews use the slider volume.</p>
+      </section>
+      <label class="toggle" for="launchAtLogin"><span>Launch at Login<small id="login-note">Checking availability…</small></span><input id="launchAtLogin" type="checkbox" role="switch" aria-describedby="login-note"></label>
+      <button id="save" type="submit" disabled>Save settings</button>
+    </fieldset>
+  </form>
+  <footer><p id="status" role="status">Loading your preferences…</p><button id="reload" type="button" hidden>Retry loading</button></footer>
+  <script src="application-preferences.js"></script>
+  <script src="application-settings.js"></script>
+</body>
+</html>
