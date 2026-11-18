@@ -122,7 +122,9 @@ location before enabling Launch at Login.
 The current app is ad-hoc signed and unnotarized. Gatekeeper can block downloaded
 copies; follow [Apple's guidance](https://support.apple.com/en-us/102445) for this
 specific app rather than disabling system protections. There are no automatic updates.
-See [PACKAGING.md](PACKAGING.md) and the [friends beta guide](docs/BETA.md).
+To generate the local beta DMG without publishing, run `npm run build:dmg`.
+See [PACKAGING.md](PACKAGING.md), the [friends beta guide](docs/BETA.md), and
+[prepared beta release notes](docs/releases/v1.0.0-beta.1.md).
 
 Preferences stay locally in `~/Library/Application Support/pixel-break-buddy/` and are
 excluded from Git. Development and packaged runs share this folder. Quitting stops

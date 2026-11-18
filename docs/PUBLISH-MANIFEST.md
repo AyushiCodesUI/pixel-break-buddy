@@ -1,13 +1,12 @@
 # Publish candidate manifest
 
-Reviewed local Git candidates after cleanup, updated to include the two recorded demo assets (67 files). The unchanged full MP4 contains account/sidebar and project information: review it before public upload. No files were staged or committed.
+Reviewed local Git candidates after cleanup, updated to include the two recorded demo assets (68 files). The unchanged full MP4 contains account/sidebar and project information: review it before public upload. No files were staged or committed.
 Regenerate the live list using `git ls-files --cached --others --exclude-standard`
 before publishing; new files can change this snapshot. This list is not a command
 to upload the entire working folder.
 
 ```text
-docs/demo/pixel-break-buddy-demo.mp4
-docs/demo/pixel-break-buddy-preview.gif
+docs/releases/v1.0.0-beta.1.md
 .gitignore
 ASSET-LICENSE.md
 LICENSE
@@ -39,6 +38,8 @@ docs/PUBLISH-MANIFEST.md
 docs/README.md
 docs/REPOSITORY-REVIEW.md
 docs/demo/README.md
+docs/demo/pixel-break-buddy-demo.mp4
+docs/demo/pixel-break-buddy-preview.gif
 docs/screenshots/README.md
 emotion-audio.js
 emotion-audio.test.js
@@ -89,7 +90,7 @@ The additional GIF and original MP4 are explicitly included as demo media.
 - The text scan does not cover visible desktop information or audio in recordings.
 - No provider-token, credential-assignment, or private-key patterns found in the
   scanned candidate text. Pattern scans cannot guarantee absence of all secrets.
-- Runtime source, PNGs, icon, package.json, and package-lock.json hashes unchanged.
+- Runtime source, PNGs, and icon remain unchanged. Beta packaging changes set the root version to 1.0.0-beta.1 in package.json/lock metadata, add a DMG command/configuration, include license notices, and strengthen package verification; dependency entries are unchanged.
 - Existing suite: 39 tests passed after documentation cleanup.
-- No build, commit, push, or release performed. Git history/object scan results and
+- A local beta DMG has since been built and verified. No commit, tag, push, or GitHub Release was created by that process. Git history/object scan results and
   remaining build-tool advisories are documented in ../PUBLIC-RELEASE-AUDIT.md.

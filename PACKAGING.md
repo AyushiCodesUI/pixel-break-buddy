@@ -1,6 +1,6 @@
 # Pixel Break Buddy: local macOS build
 
-The local build is an Apple Silicon (arm64) app, version 1.0.0, with bundle ID `com.pixelbreakbuddy.app`.
+The local build is an Apple Silicon (arm64) app, version 1.0.0-beta.1, with bundle ID `com.pixelbreakbuddy.app`.
 
 **App:** `dist/mac-arm64/Pixel Break Buddy.app`
 
@@ -68,6 +68,16 @@ npm test
 npm run build:mac
 node scripts/verify-package.cjs
 ```
+
+To generate the friends-beta DMG without uploading anything:
+
+```sh
+npm run build:dmg
+```
+
+The installer is `dist/Pixel-Break-Buddy-1.0.0-beta.1-arm64.dmg`. It contains the app
+and an Applications shortcut. See [beta release notes](docs/releases/v1.0.0-beta.1.md).
+The explicit `--publish never` command does not create tags or GitHub Releases.
 
 `npm run build:icon` regenerates the temporary icon from the existing Happy PNG. The production icon can replace `build/icon.icns` later. Python and the native `iconutil` command are used only to regenerate this development asset, never by the standalone app.
 

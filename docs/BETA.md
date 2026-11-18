@@ -1,15 +1,15 @@
 # Limited friends beta
 
 The Apple Silicon build requires macOS 13+. It is locally ad-hoc signed, unnotarized,
-and has no automatic updates. The project has not published a release or download.
+and has no automatic updates. The local installer candidate is version 1.0.0-beta.1. See releases/v1.0.0-beta.1.md for prepared release notes; this build process has not published a release or download.
 
 ## Before sharing
 
 - Review the source and asset notices, known build-time security exception, and the
   exact app version. Preserve the upstream notices inside the complete .app.
 - Include LICENSE, LICENSE-SCOPE.md, ASSET-LICENSE.md, and THIRD-PARTY-NOTICES.md
-  alongside the app in any future beta archive. The current already-built app has
-  not been rebuilt to incorporate the newly added project documentation.
+  when sharing source or preparing separate archives. The beta app includes these
+  project notices inside its app.asar and retains the Electron/Chromium runtime notices.
 - Do not include preferences, node_modules, backups, logs, or local verification data.
 - Prepare a checksum of the final archive and provide it through the same trusted
   communication used to share the beta. Choose a feedback contact before sending it.

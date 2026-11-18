@@ -1,6 +1,6 @@
 {
   "name": "pixel-break-buddy",
-  "version": "1.0.0",
+  "version": "1.0.0-beta.1",
   "description": "A small always-on-top pixel mascot for macOS.",
   "main": "main.js",
   "scripts": {
@@ -8,7 +8,8 @@
     "test-mode": "electron . --test-mode",
     "test": "node --test *.test.js",
     "build:icon": "python3 scripts/create-icon.py",
-    "build:mac": "electron-builder --mac --arm64 --dir"
+    "build:mac": "electron-builder --mac --arm64 --dir",
+    "build:dmg": "electron-builder --mac dmg --arm64 --publish never"
   },
   "devDependencies": {
     "electron": "45.3.4",
@@ -30,7 +31,11 @@
       "*.css",
       "assets/mascot/**/*.png",
       "assets/tray/*.png",
-      "!*.test.js"
+      "!*.test.js",
+      "LICENSE",
+      "LICENSE-SCOPE.md",
+      "ASSET-LICENSE.md",
+      "THIRD-PARTY-NOTICES.md"
     ],
     "mac": {
       "target": [
@@ -49,6 +54,24 @@
       "notarize": false,
       "minimumSystemVersion": "13.0.0"
     },
-    "publish": null
+    "publish": null,
+    "dmg": {
+      "artifactName": "Pixel-Break-Buddy-${version}-${arch}.${ext}",
+      "title": "Pixel Break Buddy ${version}",
+      "sign": false,
+      "contents": [
+        {
+          "x": 140,
+          "y": 220,
+          "type": "file"
+        },
+        {
+          "x": 420,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    }
   }
 }
